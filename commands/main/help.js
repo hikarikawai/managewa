@@ -36,7 +36,7 @@ module.exports = {
             ]
 
             let templateMessage = {
-                image: { url: 'https://graph.org/file/a385d0b59946065bf5ece.jpg2f66662f38372f62372f66663837623730653963396465613464396361333263393533386138316333622e6a7067' },
+                image: { url: 'https://graph.org/file/a385d0b59946065bf5ece.jpg' },
                 caption: teks,
                 footer: config.footer,
                 templateButtons: templateButtons
