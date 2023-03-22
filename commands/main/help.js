@@ -17,26 +17,26 @@ module.exports = {
             if (cmd.example) data.push(`*Example :* ${cmd.example.replace(/%prefix/gi, prefix).replace(/%command/gi, cmd.name).replace(/%text/gi, text)}`)
             return m.reply(`*Info Command ${cmd.name.replace(/^\w/, c => c.toUpperCase())}*\n\n${data.join("\n")}`)
         } else {
-            let teks = `Hello, ${pushName === undefined ? sender.split("@")[0] : pushName}\nHere is the Command List\n\n`
+            let teks = `Hello, ${pushName === undefined ? sender.split("@")[0] : pushName}\nBerikut adalah Daftar Perintah\n\n`
 
             for (let type of commands.type) {
-                teks += `┌──⭓ *${toUpper(type)} Menu*\n`
+                teks += `┌─⫸ *${toUpper(type)} Menu*\n`
                 teks += `│\n`
                 teks += `${commands.list[type].filter(v => v.type !== "hide").map((cmd) => `│⭔ ${prefix + cmd.name} ${cmd.use ? " " + cmd.use : ""}`).join("\n")}\n`
                 teks += `│\n`
-                teks += `└───────⭓\n\n`
+                teks += `└───────⫸\n\n`
             }
 
-            teks += `Send ${prefix}help followed by a command name to get detail of command, ex: ${prefix}help sticker`;
+            teks += `ketik ${prefix}help diikuti dengan nama perintah untuk mendapatkan rincian perintah, ex: ${prefix}help sticker`;
             
             let templateButtons = [
-                {index: 1, urlButton: { displayText: "Source Code", url: "https://github.com/zhwzein/Killua-Zoldyck" }},
-                {index: 2, urlButton: { displayText: "Main APIs", url: "http://zenzapis.xyz" }},
-                {index: 3, quickReplyButton: {displayText: 'This is a reply, just like normal buttons!', id: 'id-like-buttons-message'}},
+                {index: 1, urlButton: { displayText: "Owner", url: "https://t.me/JustRex" }},
+                {index: 2, urlButton: { displayText: "Channel Support", url: "https://t.me/tirexgugel" }},
+                {index: 3, quickReplyButton: {displayText: 'Ini adalah balasan, seperti tombol normal!', id: 'id-like-buttons-message'}},
             ]
 
             let templateMessage = {
-                image: { url: 'https://camo.githubusercontent.com/23f3195d91e7095ae37ef6a22475b9f1206f8334bc3e5ca61637f7d7e8cf962a/68747470733a2f2f692e70696e696d672e636f6d2f373336782f66662f38372f62372f66663837623730653963396465613464396361333263393533386138316333622e6a7067' },
+                image: { url: 'https://graph.org/file/a385d0b59946065bf5ece.jpg2f66662f38372f62372f66663837623730653963396465613464396361333263393533386138316333622e6a7067' },
                 caption: teks,
                 footer: config.footer,
                 templateButtons: templateButtons
