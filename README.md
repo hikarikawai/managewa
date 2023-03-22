@@ -1,8 +1,8 @@
 <p align="center">
-<img src="https://api.zahwazein.xyz/upload/icon.png" alt="nz" width="350"/>
+<img src="https://graph.org/file/a385d0b59946065bf5ece.jpg" alt="nz" width="350"/>
 </p>
 
-## Killua-Zoldyck
+## REXA MANAGE WHATSAPP
 
 > Example case from Zenz Rest APIs for WhatsApp Bot
 
@@ -127,16 +127,3 @@ SCAN THE QR USING YOUR WHATSAPP!
 	
 	Pull requests are welcome. Your contribution is helping me too
 	
-Group Support [Here](https://chat.whatsapp.com/G1e0U2lOTVAGKNjyFHjDGP)
-	
-</details>
-
-
-## Thanks To
-* [`@adiwajshing/baileys`](https://github.com/adiwajshing/baileys)
-* [`Mhankbarbar`](https://github.com/MhankBarBar)
-* [`DikaArdnt`](https://github.com/DikaArdnt)
-* [`Faizbastomi`](https://github.com/FaizBastomi)
-* [`FatihArridho`](https://github.com/FatihArridho)
-
-License: [MIT](https://en.wikipedia.org/wiki/MIT_License)
