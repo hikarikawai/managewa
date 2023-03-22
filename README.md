@@ -2,7 +2,7 @@
 <img src="https://graph.org/file/a385d0b59946065bf5ece.jpg" alt="nz" width="350"/>
 </p>
 
-## REXA MANAGE WHATSAPP
+## REXA MD WHATSAPP
 
 > Example case from Zenz Rest APIs for WhatsApp Bot
 
@@ -11,12 +11,6 @@
 > This Script WhatsApp Bot Using Library Baileys & Script is free for everyone, not for Sale!
 
 </br>
-
-<a href="https://github.com/zhwzein"><img title="Author" src="https://img.shields.io/badge/Author-Zhwzein-blue.svg?color=54aeff&style=for-the-badge&logo=github" /></a>  
-<a href="https://github.com/zhwzein/Killua-Zoldyck"><img title="Stars" src="https://img.shields.io/github/stars/zhwzein/Killua-Zoldyck?color=54aeff&style=flat-square" /></a>
-<a href="https://github.com/zhwzein/Killua-Zoldyck/network/members"><img title="Forks" src="https://img.shields.io/github/forks/zhwzein/Killua-Zoldyck?color=54aeff&style=flat-square" /></a>
-<a href="https://github.com/zhwzein/Killua-Zoldyck/watchers"><img title="Watching" src="https://img.shields.io/github/watchers/zhwzein/Killua-Zoldyck?label=watchers&color=54aeff&style=flat-square" /></a> <br>
-
 ---
 
 <!-- Installation -->
