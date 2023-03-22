@@ -31,8 +31,8 @@ Add FFmpeg to PATH environment variable
 ```
 	
 ```bash
-> git clone https://github.com/zhwzein/Killua-Zoldyck
-> cd Killua-Zoldyck
+> git clone https://github.com/hikarikawai/managewa
+> cd managewa
 > npm install
 ```
 </details>
