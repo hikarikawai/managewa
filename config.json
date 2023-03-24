@@ -7,7 +7,7 @@
     "autoRead": false,
     "self": true,
     "limitCount": 20,
-    "limitGame": 20
+    "limitGame": 20,
   },
   "exif": {
     "packname": "rexabot",
