@@ -4,7 +4,7 @@ module.exports = {
     desc: "Limit Check Information",
     type: "users",
     example: "%prefix%command",
-    noLimit: true,
+    noLimit: false,
     start: async(killua, m, {}) => {
         if (m.mentions.length !== 0) {
 			m.reply(`Limit left: ${user.checkPremiumUser(m.mentions[0], _user) ? "unlimited" : `${user.getLimit(m.mentions[0], _user)} / ${config.options.limitCount} Max\nLimit direset tiap pukul 06:00 WIB\n`
