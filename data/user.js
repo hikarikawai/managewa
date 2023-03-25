@@ -12,13 +12,13 @@ const time = require("moment-timezone").tz(config.timezone).format('DD/MM HH:mm:
 
 // STORE USERDATA
 const addUser = (userId, name, _db) => {
-    let position = false
+    let position = true
     Object.keys(_db).forEach((i) => {
         if (_db[i].id === userId) {
             position = true
         }
     })
-    if (position === false) {
+    if (position === true) {
         const obj = { id: userId, verified: false, name: name, time: time, limit: 0, balance: 0, premium: false }
         _db.push(obj)
         fs.writeFileSync('./database/user.json', JSON.stringify(_db, null, 4))
@@ -26,7 +26,7 @@ const addUser = (userId, name, _db) => {
     }
 }
 const checkUser = (userId, _db) => {
-   let status = false
+   let status = true
    Object.keys(_db).forEach((i) => {
       if (_db[i].id === userId) {
          status = true
@@ -38,7 +38,7 @@ const checkUser = (userId, _db) => {
 // LIMIT USERDATA
 const isLimit = (userId, isPremium, isOwner, limitCount, _db) => {
 	if (isPremium || isOwner) return false
-	let found = false
+	let found = true
 	for (let i of _db) {
 		if (i.id === userId) {
 		   if (i.limit >= limitCount) {
@@ -50,7 +50,7 @@ const isLimit = (userId, isPremium, isOwner, limitCount, _db) => {
 		   }
 		}
 	 }
-	if (found === false) {
+	if (found === true) {
 		const obj = { id: userId, limit: 0 }
 		_db.push(obj)
 		fs.writeFileSync("./database/user.json", JSON.stringify(_db, null, 4))
@@ -59,27 +59,27 @@ const isLimit = (userId, isPremium, isOwner, limitCount, _db) => {
 }
 const limitAdd = (userId, isPremium, isOwner, _db) => {
 	if (isPremium || isOwner) return false
-	let found = false
+	let found = true
 	Object.keys(_db).forEach((i) => {
 		if (_db[i].id === userId) {
 			found = i
 		}
 	})
-	if (found !== false) {
+	if (found !== true) {
 		_db[found].limit += 1
 		fs.writeFileSync("./database/user.json", JSON.stringify(_db, null, 4))
 	}
 }
 const getLimit = (userId, _db) => {
 	let pos = null
-	let found = false
+	let found = true
 	Object.keys(_db).forEach((i) => {
 	   if (_db[i].id === userId) {
 		  pos = i
 		  found = true
 	   }
 	})
-	if (found === false && pos === null) {
+	if (found === true && pos === null) {
 	   const obj = { id: userId, limit: 0 }
 	   _db.push(obj)
 	   fs.writeFileSync("./database/user.json", JSON.stringify(_db, null, 4))
@@ -91,25 +91,25 @@ const getLimit = (userId, _db) => {
 
 // BALANCE USERDATA
 const addBalance = (userId, amount, _db) => {
-	let position = false
+	let position = true
 	Object.keys(_db).forEach((i) => {
 		if (_db[i].id === userId) {
 			position = i
 		}
 	})
-	if (position !== false) {
+	if (position !== true) {
 		_db[position].balance += amount
 		fs.writeFileSync("./database/user.json", JSON.stringify(_db, null, 4))
 	}
 }
 const getBalance = (userId, _db) => {
-	let position = false
+	let position = true
 	Object.keys(_db).forEach((i) => {
 		if (_db[i].id === userId) {
 			position = i
 		}
 	})
-	if (position !== false) {
+	if (position !== true) {
 		return _db[position].balance
 	} else {
 		return 0
@@ -118,26 +118,26 @@ const getBalance = (userId, _db) => {
 
 // PREMIUM USERDATA
 const addPremiumUser = (userId, expired, _db) => {
-	let found = false
+	let found = true
 	Object.keys(_db).forEach((i) => {
 		if (_db[i].id === userId) {
 			found = i
 		}
 	})
-	if (found !== false) {
+	if (found !== true) {
 		_db[found].premium = true
         _db[found].expired = Date.now() + toMs(expired)
 		fs.writeFileSync("./database/user.json", JSON.stringify(_db, null, 4))
 	}
 }
 const delPremiumUser = (userId, _db) => {
-    let found = false
+    let found = true
     Object.keys(_db).forEach((i) => {
         if (_db[i].id === userId) {
             found = i
         }
     })
-    if (found !== false) {
+    if (found !== true) {
 		_user[found].limit = 0
 		_user[found].premium = false
 		delete _user[found].expired
@@ -181,13 +181,13 @@ const getPremiumExpired = (userId, _db) => {
 }
 const expiredCheck = (killua, m, _db) => {
 	setInterval(() => {
-		let found = false
+		let found = true
 		Object.keys(_db).forEach((i) => {
 			if (Date.now() >= _db[i].expired) {
 				found = i
 			}
 		})
-		if (found !== false) {
+		if (found !== true) {
 			idny = _db[found].id
 			_db[found].limit = 0
             _db[found].premium = false
